@@ -1,0 +1,11 @@
+ public class Main {
+    public static void main(String[] args) {
+        Node arrayToList(int[] nums){
+            LinkedList list=new LinkedList();
+            for(int i=0;i<nums.length;i++){
+                list.insertEnd(nums[i]);
+            }
+          return list.getHead();
+        }
+    }
+}

@@ -1,0 +1,21 @@
+import java.util.Stack;
+ public class Main {
+    public static void main(String[] args) {
+        Stack<Integer>s=new Stack<Integer>();
+        s.push(10);
+        s.push(20);
+        s.push(30);
+        pushButtom(s,40);
+        System.out.println("elements in the stack are: ");
+        System.out.println(s);
+    }
+    public static void pushButtom(Stack<Integer>Stack,int ele){
+        if(Stack.isEmpty()){
+            Stack.push(ele);
+            return;
+        }
+        int val=Stack.pop();
+        pushButtom(Stack,ele);
+        Stack.push(val);
+    }
+}

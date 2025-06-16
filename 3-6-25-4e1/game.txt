@@ -1,0 +1,27 @@
+public class Game {
+    String title;
+    String zoner;
+    int playcount;
+    double rating;
+    boolean isFamilyFriendly;
+    public Game(String title,String zoner,int playcount,double rating,boolean isFamilyFriendly){
+        this.title=title;
+        this.zoner=zoner;
+        this.rating=rating;
+        this.isFamilyFriendly=isFamilyFriendly;
+    }
+    public void displayInfo(){
+        System.out.println("Game title:" +title);
+        System.out.println("zoner:" +zoner);
+        System.out.println("playcount:" +playcount);
+        System.out.println("rating:" +rating +"/10.0");
+        System.out.println("FamilyFriendly:" +(isFamilyFriendly?"yes":"no"));
+    }
+    public static void main(String[] args){
+        Game game1=new Game("mine craft","adventure",50000,9.0,true);
+        game1.displayInfo();
+        System.out.println();
+        Game game2=new Game("Grand theftauto v","horror",2000,7.6,false);
+        game2.displayInfo();
+    }
+}     

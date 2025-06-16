@@ -1,0 +1,12 @@
+class Main {
+    public static void main(String[] args) {
+        int num=4521,r,q,sum=0;
+        while(num!=0){
+            q=num/10;
+            r=num%10;
+            sum+=r;
+            num=q;
+        }
+        System.out.println("sum of digit"+sum);
+    }
+}

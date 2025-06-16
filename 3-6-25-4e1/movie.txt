@@ -1,0 +1,39 @@
+public class Moive {
+     String name;
+     double rating;
+     double duration;
+     String verdict;
+     public Moive(String name,double rating,double duration){
+         this.name=name;
+         this.rating=rating;
+         this.duration=duration;
+         this.verdict=determineverdict();
+     }
+     private String determineverdict(){
+         if(rating>=8.0){
+            return " Hit";
+         }else if(rating>=5.0){
+             return " average";
+         }else {
+             return "flop";
+         }
+     }
+    public  void displayDetails(){
+        System.out.println("moive name:" +name);
+        System.out.println("rating:" +rating);
+        System.out.println("duration:" +duration+"hours");
+        System.out.println("verdict:" +verdict);
+    }
+    public static void main(String[] args){
+        Moive moive1=new Moive("Intersteller",8.6,2.9);
+        Moive moive2=new Moive("romantic flick",6.0,2.0);
+        Moive moive3=new Moive("transformers of the beast",3.8,1.5);
+        moive1.displayDetails();
+        System.out.println();
+        moive2.displayDetails();
+        System.out.println();
+        moive3.displayDetails();
+    }
+    
+        
+}
